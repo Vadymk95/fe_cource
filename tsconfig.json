@@ -11,7 +11,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "strict": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*", "src/types/*"]
     }

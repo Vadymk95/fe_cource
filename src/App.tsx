@@ -1,10 +1,12 @@
+import './styles/index.scss';
+
 import { FC, Suspense } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
-import { MainPageAsync } from './pages/MainPage/MainPage.async';
-import { AboutPageAsync } from './pages/AboutPage/AboutPage.async';
-import './styles/index.scss';
-import { useTheme } from './theme/useTheme';
+
 import { classNames } from './helpers/classNames/classNames';
+import { AboutPageAsync } from './pages/AboutPage/AboutPage.async';
+import { MainPageAsync } from './pages/MainPage/MainPage.async';
+import { useTheme } from './theme/useTheme';
 
 export const App: FC = () => {
   const { theme, toggleTheme } = useTheme();

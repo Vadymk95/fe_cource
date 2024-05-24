@@ -1,6 +1,6 @@
+import { BuildOptions } from './types/config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { RuleSetRule } from 'webpack';
-import { BuildOptions } from './types/config';
 
 export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
   //!the order of the loaders is important

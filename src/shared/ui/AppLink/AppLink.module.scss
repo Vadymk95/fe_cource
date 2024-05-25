@@ -1,0 +1,17 @@
+.AppLink {
+  color: var(--inverted-primary-color);;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s;
+  &:hover {
+    color: #0056b3;
+  }
+}
+
+.primary {
+    color: var(--inverted-primary-color);
+}
+
+.secondary {
+    color: var(--inverted-secondary-color);
+}

@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTheme } from './providers/ThemeProvider/lib/useTheme';
+import { classNames } from 'shared/lib';
+import { Navbar } from 'widgets/Navbar';
+import { useTheme } from './providers/ThemeProvider';
 import { AppRouter } from './providers/router';
 import './styles/index.scss';
 
@@ -12,10 +12,9 @@ export const App: FC = () => {
 
   return (
     <div className={classList}>
-      <button onClick={handleToggleTheme}>Theme</button>
-      <Link to="/">Main</Link>
-      <Link to="/about">About</Link>
+      <Navbar />
       <AppRouter />
+      <button onClick={handleToggleTheme}>Theme</button>
     </div>
   );
 };

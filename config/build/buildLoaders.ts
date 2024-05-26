@@ -1,13 +1,28 @@
-import { BuildOptions } from './types/config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { RuleSetRule } from 'webpack';
+import { BuildOptions } from './types/config';
 
 export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
-  //!the order of the loaders is important
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
     exclude: /node_modules/,
+  };
+
+  const svgLoader = {
+    test: /\.svg$/,
+    use: '@svgr/webpack',
+  };
+
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif|webp|mp4|webm|wav|mp3|m4a|aac|oga)$/,
+    use: {
+      loader: 'file-loader',
+      options: {
+        name: isDev ? '[path][name].[ext]' : '[contenthash].[ext]',
+        outputPath: 'assets',
+      },
+    },
   };
 
   const scssLoader = {
@@ -31,5 +46,6 @@ export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
     ],
   };
 
-  return [typescriptLoader, scssLoader];
+  //!the order of the loaders is important
+  return [typescriptLoader, scssLoader, svgLoader, fileLoader];
 };

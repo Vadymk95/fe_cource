@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { classNames } from 'shared/lib';
-import { Navbar, ThemeSwitcher } from 'widgets';
+import { Navbar, Sidebar } from 'widgets';
 import { useTheme } from './providers/ThemeProvider';
 import { AppRouter } from './providers/router';
 import './styles/index.scss';
@@ -12,8 +12,10 @@ export const App: FC = () => {
   return (
     <div className={classList}>
       <Navbar />
-      <AppRouter />
-      <ThemeSwitcher />
+      <div className='page-container'>
+        <Sidebar />
+        <AppRouter />
+      </div>
     </div>
   );
 };

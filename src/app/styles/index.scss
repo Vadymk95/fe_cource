@@ -11,3 +11,14 @@
 
   min-height: 100vh;
 }
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - var(--navbar-height));
+}
+
+.page-wrapper {
+  flex-grow: 1;
+  padding: 20px;
+}

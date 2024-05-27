@@ -1,5 +1,5 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ReacRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import {
   DefinePlugin,
@@ -26,6 +26,6 @@ export const buildPlugins = ({
       __IS_DEV__: JSON.stringify(isDev),
     }),
     new HotModuleReplacementPlugin(),
-    new ReacRefreshWebpackPlugin(),
+    new ReactRefreshWebpackPlugin(),
   ];
 };

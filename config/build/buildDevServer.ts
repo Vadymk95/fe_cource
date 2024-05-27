@@ -7,6 +7,6 @@ export const buildDevServer = ({
   return {
     port,
     historyApiFallback: true,
-    hot: true
+    hot: true,
   };
 };

@@ -7,17 +7,17 @@ import { Button } from 'shared/ui';
 import cls from './ThemeSwitcher.module.scss';
 
 interface ThemeSwitcherProps {
-  className?: string;
+    className?: string;
 }
 
 export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className = '' }) => {
-  const { theme, toggleTheme } = useTheme();
-  const handleToggleTheme = () => toggleTheme(theme);
-  const parentClassList = classNames(cls.ThemeSwitcher, {}, [className]);
+    const { theme, toggleTheme } = useTheme();
+    const handleToggleTheme = () => toggleTheme(theme);
+    const parentClassList = classNames(cls.ThemeSwitcher, {}, [className]);
 
-  return (
-    <Button className={parentClassList} onClick={handleToggleTheme}>
-      {theme === Theme.LIGHT ? <LightIcon /> : <DarkIcon />}
-    </Button>
-  );
+    return (
+        <Button className={parentClassList} onClick={handleToggleTheme}>
+            {theme === Theme.LIGHT ? <LightIcon /> : <DarkIcon />}
+        </Button>
+    );
 };

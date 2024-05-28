@@ -1,4 +1,4 @@
 export enum i18nChunks {
-  ABOUT_PAGE = 'about',
-  MAIN_PAGE = 'main',
+    ABOUT_PAGE = 'about',
+    MAIN_PAGE = 'main',
 }

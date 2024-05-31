@@ -16,6 +16,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
                         {
                             locales: ['ru', 'en'],
                             keyAsDefaultValue: true,
+                            outputPath: 'public/locales/{{locale}}/{{ns}}.json',
                         },
                     ],
                 ],

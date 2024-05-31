@@ -9,7 +9,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
         use: {
             loader: 'babel-loader',
             options: {
-                presets: [['@babel/preset-env']],
+                presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
                 plugins: [
                     [
                         'i18next-extract',

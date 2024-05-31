@@ -15,11 +15,15 @@ i18n.use(Backend)
             i18nChunks.ABOUT_PAGE,
             i18nChunks.MAIN_PAGE,
             i18nChunks.NOT_FOUND_PAGE,
-            i18nChunks.GENERAL,
+            i18nChunks.TRANSLATION
         ],
+        defaultNS: i18nChunks.TRANSLATION,
 
         interpolation: {
             escapeValue: false,
+        },
+        backend: {
+            loadPath: '/locales/{{lng}}/{{ns}}.json',
         },
     });
 

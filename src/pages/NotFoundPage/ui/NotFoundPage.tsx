@@ -10,10 +10,12 @@ interface NotFoundPageProps {
 
 const NotFoundPage: FC<NotFoundPageProps> = ({ className = '' }) => {
     const NotFoundPageClassList = classNames(cls.NotFoundPage, {}, [className]);
-    const { t } = useTranslation(i18nChunks.NOT_FOUND_PAGE);
+    const { t } = useTranslation();
 
     return (
-        <div className={NotFoundPageClassList}>{t('Страница не найдена')}</div>
+        <div className={NotFoundPageClassList}>
+            <p>{t('Страница не найдена')}</p>
+        </div>
     );
 };
 

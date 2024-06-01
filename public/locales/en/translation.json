@@ -1,6 +1,9 @@
 {
+  "throw error": "throw error",
+  "Вернуться на главную": "Back to the main page",
   "Главная страница": "Главная страница",
   "О сайте": "О сайте",
+  "Произошла непредвиденная ошибка": "Something goes wrong...",
   "Страница не найдена": "Page not found",
   "Язык": "English"
 }

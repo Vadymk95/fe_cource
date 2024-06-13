@@ -15,7 +15,7 @@ i18n.use(Backend)
             i18nChunks.ABOUT_PAGE,
             i18nChunks.MAIN_PAGE,
             i18nChunks.NOT_FOUND_PAGE,
-            i18nChunks.TRANSLATION
+            i18nChunks.TRANSLATION,
         ],
         defaultNS: i18nChunks.TRANSLATION,
 

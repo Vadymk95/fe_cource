@@ -1,5 +1,6 @@
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import {
     Compiler,
@@ -41,5 +42,8 @@ export const buildPlugins = ({
         new HotModuleReplacementPlugin(),
         new ReactRefreshWebpackPlugin(),
         new ServerMessagePlugin(),
+        new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        }),
     ];
 };

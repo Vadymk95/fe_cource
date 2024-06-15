@@ -13,4 +13,27 @@ describe('Sidebar', () => {
         );
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
+
+    test('should render with className', () => {
+        render(
+            <Suspense fallback={<div>Loading...</div>}>
+                <Sidebar className="test" />
+            </Suspense>
+        );
+        expect(screen.getByTestId('sidebar')).toHaveClass('test');
+    });
+
+    test('should toggle', () => {
+        render(
+            <Suspense fallback={<div>Loading...</div>}>
+                <Sidebar />
+            </Suspense>
+        );
+        const toggle = screen.getByTestId('sidebar-toogle');
+        expect(screen.getByTestId('sidebar')).not.toHaveClass('collapsed');
+        toggle.click();
+        expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
+        toggle.click();
+        expect(screen.getByTestId('sidebar')).not.toHaveClass('collapsed');
+    });
 });

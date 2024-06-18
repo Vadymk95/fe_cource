@@ -1,4 +1,4 @@
-import { FC, Suspense, useEffect } from 'react';
+import { FC, Suspense } from 'react';
 import { classNames } from 'shared/lib';
 import { Navbar, Sidebar } from 'widgets';
 import { useTheme } from './providers/ThemeProvider';

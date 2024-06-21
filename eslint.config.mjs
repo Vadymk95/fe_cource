@@ -30,5 +30,8 @@ export default [
                 version: 'detect', // автоматически определяет версию React
             },
         },
+        env: {
+            jest: true,
+        }
     },
 ];
